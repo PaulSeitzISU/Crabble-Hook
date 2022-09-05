@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeaBed : MonoBehaviour
+public class TerrainManager : MonoBehaviour
 {
+    public delegate void Ticket();
+    public static event Ticket SeaBedTicketCheck;
 
-    public Vector2 Spawnlocation;
+    public int seabedTicket;
+    public int seabedTickeCurrent;
 
 
     // Start is called before the first frame update
